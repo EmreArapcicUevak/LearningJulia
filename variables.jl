@@ -28,5 +28,27 @@ println(a)
 println(b)
 
 const E = 4;
-E = 2; # this is okay but gives us a warning
+# E = 2; # this is okay but gives us a warning
 # E = 2.3 is not okay because 2.3 is not an Int64 type
+
+
+
+#= Complex Numbers =#
+z = 3 + 4im
+println(typeof(z))
+
+z = 3.0 + 4.1im
+println(typeof(z))
+
+# sqrt(-1) Error
+println(sqrt(Complex(-1)))
+
+a = 2.1; b = 5;
+c = Complex(a,b);
+println(c)
+println(typeof(c))
+println(real(c));
+println(imag(c));
+println(conj(c));
+
+println(isa(Complex(-1), Complex))
